@@ -1,1 +1,187 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
+  <style>
+    body { font-family: century-gothic, sans-serif; font-size: 10pt; margin-right: 1cm; margin-left: 1cm; margin-top: 0cm; margin-bottom: 0cm; padding-bottom: 1.3cm; /* Space for fixed footer */color: #333; }
+    
+    /*.header { display: flex; justify-content: space-between; margin-bottom: 40px; border-bottom: 3px solid #101F4D; padding-bottom: 20px;*/ }
+    .page-break {
+    page-break-before: always;
+  }
+  
+      .header {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2.87cm;
+      background: #101F4D;
+      /*border-top: 2px solid #dee2e6; */
+      /*background-image: url('https://karlhstone.github.io/electronikaa/fondo%20encabezado%20electronikaa2026.svg'); 
+      background-repeat: no-repeat; 
+      background-size: contain;
+      background-position: -20% 60%;*/
+      z-index: -1;
+      padding: 0.70cm 1cm;
+      font-size: 11pt;
+      color: #fff;
+      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    /* Footer visible on screen */
+  .footer {
+    display: none;
+  }
+  
+  /* Footer only in print */
+  @media print {
+    .footer {
+      display: block;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1.22cm;
+      background: #101F4D;
+      /*border-top: 2px solid #dee2e6; */
+      padding: 0.25cm 1cm;
+      font-size: 10pt;
+      color: #fff;
+      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .header {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2.87cm;
+      background: #101F4D;
+      /*border-top: 2px solid #dee2e6; */
+      /*background-image: url('https://karlhstone.github.io/electronikaa/fondo%20encabezado%20electronikaa2026.svg'); 
+      background-repeat: no-repeat; 
+      background-size: contain; 
+      background-position: -20% 60%;*/
+      z-index: -1;
+      padding: 0.70cm 1cm;
+      font-size: 11pt;
+      color: #fff;
+      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    body {
+      margin-top: 3cm; /* Agrega margen superior al contenido para que no se superponga con el header fijo */
+      padding-bottom: 2cm; /* Extra space to prevent content overlap */
+    }
+  }
+    .company { font-size: 24px; font-weight: bold; color: #101F4D; }
+    .invoice-title { font-size: 32px; font-weight: bold; color: #ED1C24; }
+    .invoice-number { color: #6B7280; margin-top: 5px; }
+    .bill-to { margin: 0cm 0cm; }
+    .bill-to h3 { margin: 0 0 10px 0; color: #ED1C24; }
+    table { width: 100%; border-collapse: collapse; margin: 30px 0; }
+    th { background: #F3F4F6; padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid #E5E7EB; }
+    td { padding: 12px; border-bottom: 1px solid #E5E7EB; }
+    .total-section { margin-top: 30px; text-align: right; }
+    .total-row { display: flex; justify-content: flex-end; padding: 8px 0; }
+    .total-label { width: 150px; text-align: right; padding-right: 20px; }
+    .total-value { width: 120px; text-align: right; font-weight: 600; }
+    .grand-total { font-size: 20px; color: #101F4D; border-top: 2px solid #E5E7EB; padding-top: 15px; margin-top: 10px; }
+    /*.footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #E5E7EB; color: #6B7280; font-size: 14px; }*/
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div style="height: 1.47cm;">
+      <img src="https://karlhstone.github.io/electronikaa/logo%20electronikaa2026.svg" alt="logo" height="100%" style="vertical-align:middle">
+      <!-- https://acortar.link/UWju3m https://acortar.link/UfbiU8 <div class="company">Electronikaa</div>
+      <div style="margin-top: 10px; color: #101F4D;">
+        123 Business Street<br>
+        San Francisco, CA 94102<br>
+        contact@acme.com
+      </div> -->
+    </div>
+    <!-- <div style="text-align: right;">
+      <div class="invoice-title">Cotización</div>
+      <div class="invoice-number">&lt;&lt;[Cotizacion]&gt;&gt;</div>
+      <div style="margin-top: 10px; color: #6B7280;">
+        Fecha: &lt;&lt;[FechaEmision]&gt;&gt;<br>
+        Due: February 15, 2024
+      </div>
+    </div> -->
+  </div>
 
+  <div class="bill-to">
+    <h3>&lt;&lt;[IDCliente].[Nombre]&gt;&gt; &lt;&lt;[IDCliente].[Apellido Paterno]&gt;&gt; &lt;&lt;[IDCliente].[Apellido Materno]&gt;&gt;</h3>
+    <div style="color: #6B7280;">
+      <strong>A QUIEN CORRESPONDA</strong><br>
+      456 Client Avenue<br>
+      New York, NY 10001<br>
+      billing@techsolutions.com
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: center;">Part.</th>
+        <th style="text-align: center;">Cant.</th>
+        <th style="text-align: center;">U.M.</th>
+        <th style="text-align: center;">Descripción</th>
+        <th style="text-align: center;">Precio Unitario</th>
+        <th style="text-align: center;">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <p>&lt;&lt;Start: Filter(DetalleCotizacion, [IDCOT]=[_THISROW].[IDCOT])&gt;&gt;
+      <tr>
+        <td style="text-align: center;">&lt;&lt;[NumPartida]&gt;&gt;</td>
+        <td style="text-align: center;">&lt;&lt;[Cantidad]&gt;&gt;</td>
+        <td style="text-align: center;">&lt;&lt;[UM]&gt;&gt;</td>
+        <td>
+          &lt;&lt;[Descripcion]&gt;&gt;
+        </td>
+        <td style="text-align: right;">&lt;&lt;[PrecioUnitario]&gt;&gt;</td>
+        <td style="text-align: right;">&lt;&lt;[Total]&gt;&gt;</td>
+      </tr>
+      &lt;&lt;End&gt;&gt;</p>
+    </tbody>
+  </table>
+
+  <div class="total-section">
+    <div class="total-row">
+      <div class="total-label">Subtotal:</div>
+      <div class="total-value">&lt;&lt;[Subtotal]&gt;&gt;</div>
+    </div>
+    <div class="total-row">
+      <div class="total-label">IVA 16%:</div>
+      <div class="total-value">&lt;&lt;[IVA16]&gt;&gt;</div>
+    </div>
+    <div class="total-row grand-total">
+      <div class="total-label">Total:</div>
+      <div class="total-value">&lt;&lt;[Total]&gt;&gt;</div>
+    </div>
+  </div>
+  <!-- Footer 1  
+  <div class="footer">
+    <strong>Payment Terms:</strong> Payment is due within 15 days. Please make checks payable to ACME Corporation.<br>
+    <strong>Thank you for your business!</strong>
+  </div> -->
+  <div class="footer">
+  <span>921 202 17 69</span>
+  <span>hercran67@yahoo.com</span>
+  <span>Electronikaahc</span>
+</div>
+</body>
+</html>
