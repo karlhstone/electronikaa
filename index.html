@@ -3,9 +3,15 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
   <style>
-    body { font-family: century-gothic, sans-serif; font-size: 10pt; margin-right: 1cm; margin-left: 1cm; margin-top: 0cm; margin-bottom: 0cm; padding-bottom: 1.3cm; /* Space for fixed footer */color: #333; }
+    body { font-family: century-gothic, sans-serif; font-size: 10pt; margin-right: 1cm; margin-left: 1cm; margin-top: 3.5cm; margin-bottom: 0cm; padding-bottom: 1.3cm; /* Space for fixed footer */color: #333; }
     
     /*.header { display: flex; justify-content: space-between; margin-bottom: 40px; border-bottom: 3px solid #101F4D; padding-bottom: 20px;*/ 
+    .vineta::before {
+      content: "·";
+      color: #ED1C24;
+      font-size: 10pt;
+    }
+    
     .page-break {
     page-break-before: always;
   }
@@ -21,20 +27,47 @@
       /*border-top: 2px solid #dee2e6; */
       background-image: url('https://karlhstone.github.io/electronikaa/fondo%20encabezado%20electronikaa2026.svg'); 
       background-repeat: no-repeat; 
-      background-size: 50% 50%;
-      background-position: left center;
+      background-size: 12.5cm;
+      background-position: -0.7cm -1.1cm;
       z-index: -1;
       padding: 0.30cm 1cm;
-      font-size: 11pt;
+      font-size: 10pt;
       color: #fff;
       
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-sizing: border-box;
     }
     /* Footer visible on screen */
   .footer {
-    display: none;
+    /*display: none; */
+      display: block;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1.22cm;
+      background: #101F4D;
+      /*border-top: 2px solid #dee2e6; */
+      padding: 0.25cm 1cm;
+      font-size: 10pt;
+      color: #fff;
+      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+  }
+  
+  .footer span {
+    height: 0.72cm;
+    vertical-align: middle;
+  }
+  
+  .icono {
+    vertical-align: bottom;
+    margin-right: 0.2cm;
   }
   
   /* Footer only in print */
@@ -55,6 +88,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-sizing: border-box;
+    }
+    
+    .footer span {
+      height: 0.72cm;
+      vertical-align: middle;
     }
     
     .header {
@@ -68,16 +107,17 @@
       /*border-top: 2px solid #dee2e6; */
       background-image: url('https://karlhstone.github.io/electronikaa/fondo%20encabezado%20electronikaa2026.svg'); 
       background-repeat: no-repeat; 
-      background-size: 50% 50%; 
-      background-position: left center;
+      background-size: 12.5cm; 
+      background-position: -0.7cm -1.1cm;
       z-index: -1;
       padding: 0.30cm 1cm;
-      font-size: 11pt;
+      font-size: 10pt;
       color: #fff;
       
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-sizing: border-box;
     }
     
     body {
@@ -112,14 +152,17 @@
         contact@acme.com
       </div> -->
     </div>
-    <!-- <div style="text-align: right;">
-      <div class="invoice-title">Cotización</div>
+    <div style="text-align: center; font-weight: bold;">
+      <p>
+       Electricidad en gral <span class="vineta"></span> Aire acondicionado<br>Refrigeración <span class="vineta"></span> Electrónica <span class="vineta"></span> Máquinas eléctricas<br>PLC <span class="vineta"></span> Paneles solares <span class="vineta"></span> Mantenimiento de edificios
+      </p>
+      <!--<div class="invoice-title">Cotización</div>
       <div class="invoice-number">&lt;&lt;[Cotizacion]&gt;&gt;</div>
       <div style="margin-top: 10px; color: #6B7280;">
         Fecha: &lt;&lt;[FechaEmision]&gt;&gt;<br>
         Due: February 15, 2024
-      </div>
-    </div> -->
+      </div>-->
+    </div>
   </div>
 
   <div class="bill-to">
@@ -179,9 +222,14 @@
     <strong>Thank you for your business!</strong>
   </div> -->
   <div class="footer">
-  <span>921 202 17 69</span>
-  <span>hercran67@yahoo.com</span>
-  <span>Electronikaahc</span>
+  <span><img class="icono" src="https://karlhstone.github.io/electronikaa/cel%20icon.svg" alt="cel" height="50%">921 202 17 69</span>
+  <span><img class="icono" src="https://karlhstone.github.io/electronikaa/email.svg" alt="email" height="50%">hercran67@yahoo.com</span>
+  
+  <span><img class="icono" src="https://karlhstone.github.io/electronikaa/aireacond.svg" alt="aac" height="100%"></span>
+  <span><img class="icono" src="https://karlhstone.github.io/electronikaa/electricidad.svg" alt="elec" height="100%"></span>
+  <span><img class="icono" src="https://karlhstone.github.io/electronikaa/edificios.svg" alt="edif" height="100%"></span>
+  
+  <span><img class="icono" src="https://karlhstone.github.io/electronikaa/facebook.svg" alt="fb" height="70%">Electronikaahc</span>
 </div>
 </body>
 </html>
